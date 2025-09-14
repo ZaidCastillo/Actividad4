@@ -47,38 +47,6 @@ public class ArbolBinario {
         numElementos++;
     }
 
-    // Método para insertar Empleados dentro del método para eliminar Empleados (se requiere clase Nodo en vez de Empleado)
-    public void insertarElemento(Nodo nuevoNodo){
-        if (this.raiz == null) {
-            this.raiz = nuevoNodo;
-        } else {
-            Nodo temp = raiz;
-            while(temp != null) {
-                if (temp.getHijoDerecho() == null && temp.getHijoIzquierdo() == null) {
-                    if (nuevoNodo.getEmpleado().compareTo(temp.getEmpleado()) == 1) {
-                        temp.setHijoDerecho(nuevoNodo);
-                        temp = null;
-                    } else {
-                        temp.setHijoIzquierdo(nuevoNodo);
-                        temp = null;
-                    }
-                } else if (nuevoNodo.getEmpleado().compareTo(temp.getEmpleado()) == 1 && temp.getHijoDerecho() == null) {
-                    temp.setHijoDerecho(nuevoNodo);
-                    temp = null;
-                } else if (nuevoNodo.getEmpleado().compareTo(temp.getEmpleado()) == -1 && temp.getHijoIzquierdo() == null) {
-                    temp.setHijoIzquierdo(nuevoNodo);
-                    temp = null;
-                } else {
-                    if (nuevoNodo.getEmpleado().compareTo(temp.getEmpleado()) == 1) {
-                        temp = temp.getHijoDerecho();
-                    } else {
-                        temp = temp.getHijoIzquierdo();
-                    }
-                }
-            }
-        }
-    }
-
     // Método para buscar Empleados basándose en su ID.
     public Empleado buscarEmpleado (int id) {
         Empleado valor = new Empleado(id);
