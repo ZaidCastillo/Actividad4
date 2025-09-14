@@ -22,12 +22,7 @@ public class Empleado implements Comparable<Empleado> {
     public String getNombre() {
         return nombre;
     }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    public void setID(int ID) {
-        this.ID = ID;
-    }
+
 
     // Metodo para comparar los IDs de los Empleados que se instancien
     @Override
